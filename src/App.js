@@ -10,7 +10,7 @@ function App() {
   const [csvData, setCsvData] = useState([]);
 
   return (
-    <div className="App">
+    <div className="App" style={{ textAlign: "center"}}>
 
       <Hero/>
       <FileUpload setData={setData} setCsvData={setCsvData} />
@@ -19,6 +19,18 @@ function App() {
           data={csvData}
           filename={"manager_expenses.csv"}
           className="downloadLink"
+          style={{ 
+            background: "#F7F7F8",
+            border: "none",
+            color: "#4B286D",
+            padding: "10px 20px",
+            textDecoration: "none",
+            textAlign: "center",
+            display: "inline-block",
+            borderRadius: "5px",
+            marginTop: "20px",
+            fontSize: "25px",
+        }}
           target="_blank"
         >
           Download CSV
