@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import FileUpload from './components/FileUpload/FileUpload';
 import ManagerExpenseTable from './components/ManagerExpenseTable/ManagerExpenseTable';
 import Hero from './components/Hero/Hero';
-import styles from './App.css';
-
 
 import { CSVLink } from 'react-csv'; 
 function App() {
