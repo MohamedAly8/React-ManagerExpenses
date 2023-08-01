@@ -1,0 +1,40 @@
+/* managerexpensetable.module.css */
+.tableContainer {
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+.yearHeader {
+    font-size: 2rem;
+}
+  
+.hr {
+    margin: 20px 0;
+}

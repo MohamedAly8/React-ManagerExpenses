@@ -1,0 +1,35 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background: #F7F7F8;
+    color: #000;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.heroHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.heroDescription {
+    font-size: 1.2rem;
+}
+
+.heroImage {
+    /* make image smaller */
+    height: 100px;
+}
