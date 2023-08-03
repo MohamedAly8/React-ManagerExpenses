@@ -4,32 +4,35 @@ import axios from 'axios';
 import styles from './fileupload.module.css';
 
 const FileUpload = ({ setData, setCsvData }) => {
-  const [files, setFiles] = useState(null);
   const [uploadMessage, setUploadMessage] = useState(""); 
+  const [files, setFiles] = useState([]);
 
   const submitFiles = (event) => {
     event.preventDefault();
 
     const formData = new FormData();
-    for (let i = 0; i < files.length; i++) {
-      formData.append("files", files[i]);
-    }
+  
+    formData.append('file', files[0]);
+  
 
     axios
-      .post("https://fastapi-manager-expenses-4c9f96c04be4.herokuapp.com/uploadfiles2", formData, {
+      .post("https://https://fastapi-manager-expenses-4c9f96c04be4.herokuapp.com/uploadfiles", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((response) => {
         setData(response.data);
+        console.log(response.data);
         // Prepare data for CSV
-        const csvData = response.data ? Object.entries(response.data.all_results).flatMap(([year, managers]) => {
-          return Object.entries(managers).map(([manager, expenses]) => {
-            return {
-              year,
-              manager,
-              ...expenses,
-              total: response.data.total_results[year][manager]
-            };
+        const csvData = response.data ? Object.entries(response.data).flatMap(([year, expenses]) => {
+          return ['employee_expenses', 'vendor_expenses'].flatMap(type => {
+            return Object.entries(expenses[type]).map(([name, monthlyExpenses]) => {
+              return {
+                year,
+                type,
+                name,
+                ...monthlyExpenses
+              };
+            });
           });
         }) : [];
         setCsvData(csvData);

@@ -10,7 +10,7 @@ function App() {
   const [csvData, setCsvData] = useState([]);
 
   return (
-    <div className="App" style={{ textAlign: "center"}}>
+    <div className="App" style={{ textAlign: "center", marginBottom: "200px"}}>
 
       <Hero/>
       <FileUpload setData={setData} setCsvData={setCsvData} />
