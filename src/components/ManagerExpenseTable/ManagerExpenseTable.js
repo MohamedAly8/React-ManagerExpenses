@@ -26,7 +26,8 @@ const ManagerExpenseTable = ({ data }) => (
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Manager/Vendor</th>
+                {/* if type is employee expenses th is employee else vendor */}
+                <th>{type === 'employee_expenses' ? 'Employee' : 'Vendor'}</th>
                 <th>Jan</th>
                 <th>Feb</th>
                 <th>Mar</th>

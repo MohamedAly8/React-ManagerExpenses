@@ -11,9 +11,9 @@
     position: relative;
     z-index: 1;
     background-image: url("../../../public/panda.png");
-    background-repeat: no-repeat;
-    background-position: 2% 100%;
-    background-size: 20%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 30%;
 }
 
 .heroHead {
@@ -23,6 +23,15 @@
     justify-content: center;
 
 }
+
+.textcontainer {
+    background: #c5c5c5e3;
+    opacity: 0.95;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+
 
 .heroTitle {
     font-size: 2.5rem;
@@ -35,5 +44,6 @@
 
 .heroImage {
     /* make image smaller */
-    height: 100px;
+    height: 120px;
+    background: none;
 }
