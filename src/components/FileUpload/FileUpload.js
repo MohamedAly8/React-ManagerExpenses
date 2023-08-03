@@ -16,7 +16,7 @@ const FileUpload = ({ setData, setCsvData }) => {
   
 
     axios
-      .post("https://fastapi-manager-expenses-4c9f96c04be4.herokuapp.com/uploadfiles", formData, {
+      .post("http://localhost:8000/uploadfiles", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((response) => {

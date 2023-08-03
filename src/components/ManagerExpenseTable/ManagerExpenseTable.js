@@ -48,7 +48,9 @@ const ManagerExpenseTable = ({ data }) => (
                 <tr key={name}>
                   <td>{name}</td>
                   {Array.from({length: 12}, (_, i) => i + 1).map(month => (
-                    <td key={month}>{monthlyExpenses[month] !== '0.00' ? numberFormat.format(Number(monthlyExpenses[month])) : '-'}</td>
+                    // if monthlyExpenses[month] is not 0.00 or not a number display '-' else display the number
+                    <td key={month}>{monthlyExpenses[month] && monthlyExpenses[month] !== '0.00'  ? numberFormat.format(Number(monthlyExpenses[month])) : '-'}</td>
+        
                   ))}
                   <td>{monthlyExpenses['Total'] !== '0.00' ? numberFormat.format(Number(monthlyExpenses['Total'])) : '-'}</td>
                 </tr>
