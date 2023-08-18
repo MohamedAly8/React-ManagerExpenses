@@ -10,24 +10,7 @@ const numberFormat = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 2
 });
 const colorPalette = [
-  '#FF6B6B',  // Reddish
-  '#4ECDC4',  // Teal
-  '#FFD166',  // Yellowish
-  '#26547C',  // Dark Blue
-  '#06D6A0',  // Light Green
-  '#FF9F1C',  // Orange
-  '#5E548E',  // Purple
-  '#FA7921',  // Tangerine
-  '#D7263D',  // Brick Red
-  '#007F5F',  // Deep Turquoise
-  '#F64740',  // Coral
-  '#3A506B',  // Blue Gray
-  '#1B998B',  // Jade
-  '#2E294E',  // Dark Purple
-  '#F46036',  // Vermilion
-  '#2CDA9D',  // Mint
-  '#6B4226',  // Sienna
-  '#FFC857'   // Goldenrod
+  '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#000000'
 ];
 
 
